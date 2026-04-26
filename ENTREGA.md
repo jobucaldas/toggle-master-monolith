@@ -146,7 +146,7 @@ Uma dificuldade que essa solução apresentou foi a necessidade de anexar uma ro
 
 7. [Vínculo de porta](https://12factor.net/pt_br/port-binding)
 
-    - [Aderente]: A aplicação utiliza do webserver gunicorn para 
+    - [Aderente]: A aplicação utiliza do webserver gunicorn para disponibilizar acesso aos usuarios, podendo ser facilmente integrada a outras aplicação como uma api.
 
 8. [Concorrência](https://12factor.net/pt_br/concurrency)
 
