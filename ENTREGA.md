@@ -122,36 +122,36 @@ Uma dificuldade que essa solução apresentou foi a necessidade de anexar uma ro
 
 1. [Base de Código](https://12factor.net/pt_br/codebase)
 
-    - [Aderente]: O código da aplicação está hospedado no github em uma unica branch main, a partir da qual é possível instânciar novas implantações conforme necessário.
+    - [Aderente]: O código da aplicação está hospedado no github em uma única branch main, a partir da qual é possível instanciar novas implantações conforme necessário.
 
 2. [Dependências](https://12factor.net/pt_br/dependencies)
 
-    - [Aderente]: As depêndencias da aplicação estão definidas no arquivo requirements.txt e não dependem de ferramentas instaladas no sistema, sendo possivel o isolar por meio de virtualenv ou containers.
+    - [Aderente]: As dependências da aplicação estão definidas no arquivo requirements.txt (com suas devidas versões fixadas) e não dependem de ferramentas instaladas no sistema, sendo possível isolar por meio de virtualenv ou containers.
 
 3. [Configurações](https://12factor.net/pt_br/config)
 
-    - [Aderente]: As configurações da aplicação são recuperadas das variáveis de ambiente, sendo independentes do código.
+    - [Aderente]: As configurações da aplicação são recuperadas das variáveis de ambiente, sendo independentes do código e de fácil configuração, gerenciamento e troca entre ambientes.
 
 4. [Serviços de Apoio](https://12factor.net/pt_br/backing-services)
 
-    - [Aderente]: O app utiliza um banco de dados postgres e, por meio de variáveis de ambiente, pode ser alterado por outro banco de dados equivalente a qualquer momento.
+    - [Aderente]: O app utiliza um banco de dados Postgres e, por meio de variáveis de ambiente, pode ser alterado por outro banco de dados equivalente a qualquer momento.
 
 5. [Construa, lance, execute](https://12factor.net/pt_br/build-release-run)
 
-    - [Não aderente]: A aplicação não adere a este fator, não há definição de releases e, após o build da aplicação por meio do dockerfile, ainda é possível alterar o código executado (o que é realizado pelo docker-compose).
+    - [Não aderente]: A aplicação não adere a este fator, não há definição de releases e, após o build da aplicação por meio do Dockerfile, ainda é possível alterar o código executado (o que é realizado pelo docker-compose).
 
 6. [Processos](https://12factor.net/pt_br/processes)
 
-    - [Aderente]: A aplicação armazena todos os dados importantes em um serviço de apoio (o banco de dados postgresql).
+    - [Aderente]: A aplicação armazena todos os dados importantes em um serviço de apoio (o banco de dados Postgresql).
 
 7. [Vínculo de porta](https://12factor.net/pt_br/port-binding)
 
-    - [Aderente]: A aplicação utiliza do webserver gunicorn para disponibilizar acesso aos usuarios, podendo ser facilmente integrada a outras aplicação como uma api.
+    - [Aderente]: A aplicação utiliza do webserver gunicorn para disponibilizar acesso aos usuários, podendo ser facilmente integrada a outras aplicações como uma API.
 
 8. [Concorrência](https://12factor.net/pt_br/concurrency)
 
-    - [Aderente]: Devido a simplicidade da aplicação não há processos concorrentes na aplicação, com o processo sendo contido nas interfaces de manipulação de flags.
-    Há também um processo extra que roda na execução da imagem para inicializar o banco de dados.
+    - [Aderente]: Devido a simplicidade da aplicação não há processos concorrentes, com o processo sendo contido nas interfaces de manipulação de flags.
+    Há também um processo extra que roda na execução da imagem para inicializar o banco de dados.
 
 9. [Descartabilidade](https://12factor.net/pt_br/disposability)
 
@@ -159,11 +159,11 @@ Uma dificuldade que essa solução apresentou foi a necessidade de anexar uma ro
 
 10. [Dev/prod semelhantes](https://12factor.net/pt_br/dev-prod-parity)
 
-    - [Aderente]: Há paridade entre as ferramentas em uso, com as mesmas ferramentas e integração já configurada sendo disponibilizadas por meio do docker-compose no ambiente dos desenvolvedores.
+    - [Aderente]: Há paridade entre as ferramentas em uso, com as mesmas ferramentas e integração já configurada sendo disponibilizadas por meio do docker-compose no ambiente dos desenvolvedores (versões de bibliotecas fixas no requirements.txt).
 
 11. [Logs](https://12factor.net/pt_br/logs)
 
-    - [Parcialmente Aderente]: O migrate da aplicação armazena logs em stdout para acompanhamento de erros durante sua execução, porém erros subsequentes são suprimidos e notificados apenas como retorno dos requests realizados na aplicação, se tornando efetivamente invisiveis para a operação.
+    - [Parcialmente Aderente]: O migrate da aplicação armazena logs em stdout para acompanhamento de erros durante sua execução, porém erros subsequentes são suprimidos e notificados apenas como retorno dos requests realizados na aplicação, se tornando efetivamente invisíveis para a operação.
 
 12. [Processos de Admin](https://12factor.net/pt_br/admin-processes)
 
