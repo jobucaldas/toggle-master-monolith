@@ -14,9 +14,7 @@ Entrega do primeiro tech challenge, turma 3DCLT
 
 [Vídeo](https://www.loom.com/share/2a5f7aad269b44fa8f6b598bdf42862d)
 
-[Diagrama](https://mermaid.ai/view/2599fdc3-9e3f-4b23-b039-f4663e1e0906)
-
-[AWS Price Calculator](https://calculator.aws/#/estimate?id=91ac163466717b8068294cfb3c12e606db64539f)
+[AWS Price Calculator](https://calculator.aws/#/estimate?id=b22abf18e24f1bd569fa75e68ee5b460d332825c)
 
 ## Diagrama de Arquitetura
 
