@@ -12,7 +12,11 @@ Entrega do primeiro tech challenge, turma 3DCLT
 
 ## Links
 
-[Vídeo](https://www.loom.com/share/2a5f7aad269b44fa8f6b598bdf42862d)
+[Entrega no Github](https://github.com/jobucaldas/toggle-master-monolith/blob/main/ENTREGA.md)
+
+[Vídeo](https://youtu.be/KwXbSx4eqC8)
+
+[Diagrama](https://excalidraw.com/#json=Pf_ufEBmQQkXMtfrqO6Qy,DvIMyheOM0tvWFWuB6_ihQ)
 
 [AWS Price Calculator](https://calculator.aws/#/estimate?id=b22abf18e24f1bd569fa75e68ee5b460d332825c)
 
